@@ -1,11 +1,322 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/sky_blue">
 
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/wrapper"
+        android:layout_above="@+id/bottom">
 
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/imageView"
+            android:layout_weight="1"
+            android:src="@drawable/sunny"
+            android:layout_marginRight="@dimen/margin_big_icon" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/content"
+            android:layout_above="@+id/bottom"
+            android:weightSum="2"
+            android:gravity="fill">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/margin_left"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="bottom"
+                    android:layout_marginBottom="@dimen/margin_bottom_main"
+                    android:paddingBottom="@dimen/margin_bottom_main">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="26"
+                            android:id="@+id/txt_main_weather"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/main_weather" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/degree"
+                            android:id="@+id/txt_main_format"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/main_format" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Lunes"
+                            android:id="@+id/txt_today"
+                            android:textSize="@dimen/normal_text"
+                            android:textColor="@color/white"
+                            android:paddingRight="@dimen/normal_space" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/separator"
+                            android:id="@+id/textView"
+                            android:textSize="@dimen/separator_text"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Mayo 10"
+                            android:id="@+id/txt_current_date"
+                            android:textSize="@dimen/normal_text"
+                            android:textColor="@color/white"
+                            android:paddingLeft="@dimen/normal_space" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="top"
+                    android:paddingTop="@dimen/margin_top_main">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="02"
+                            android:id="@+id/txt_current_hours"
+                            android:textSize="@dimen/time_text"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=":"
+                            android:id="@+id/textView3"
+                            android:textSize="@dimen/time_text"
+                            android:textColor="@color/white"
+                            android:padding="@dimen/normal_space" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="04"
+                            android:id="@+id/txt_current_minutes"
+                            android:textSize="@dimen/time_text"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cochabamba"
+                        android:id="@+id/txt_city"
+                        android:textSize="@dimen/normal_text"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="BOLIVIA"
+                        android:id="@+id/txt_country"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/small_text"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView2" />
+
+        </LinearLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottom"
+        android:layout_alignParentBottom="true"
+        android:weightSum="3"
+        android:paddingBottom="@dimen/padding_bottom">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Martes"
+                android:id="@+id/txt_next_day_1"
+                android:textSize="@dimen/normal_text"
+                android:gravity="center"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/small_icon_size"
+                android:id="@+id/img_next_day_1"
+                android:src="@drawable/sunny"
+                android:layout_margin="@dimen/normal_space" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="26"
+                    android:id="@+id/txt_next_day_1_weather"
+                    android:textSize="@dimen/normal_text"
+                    android:gravity="center"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/degree"
+                    android:id="@+id/txt_next_day_1_format"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/normal_format" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Miércoles"
+                android:id="@+id/txt_next_day_2"
+                android:textSize="@dimen/normal_text"
+                android:gravity="center"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/small_icon_size"
+                android:id="@+id/img_next_day_2"
+                android:src="@drawable/sunny"
+                android:layout_margin="@dimen/normal_space" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="26"
+                    android:id="@+id/txt_next_day_2_weather"
+                    android:textSize="@dimen/normal_text"
+                    android:gravity="center"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/degree"
+                    android:id="@+id/txt_next_day_2_format"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/normal_format" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Jueves"
+                android:id="@+id/txt_next_day_3"
+                android:textSize="@dimen/normal_text"
+                android:gravity="center"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/small_icon_size"
+                android:id="@+id/img_next_day_3"
+                android:src="@drawable/sunny"
+                android:layout_margin="@dimen/normal_space" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="26"
+                    android:id="@+id/txt_next_day_3_weather"
+                    android:textSize="@dimen/normal_text"
+                    android:gravity="center"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/degree"
+                    android:id="@+id/txt_next_day_3_format"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/normal_format" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
 </RelativeLayout>

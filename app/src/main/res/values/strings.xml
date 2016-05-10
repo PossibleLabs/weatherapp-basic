@@ -1,6 +1,9 @@
 <resources>
-    <string name="app_name">WeatherApp</string>
+    <string name="app_name">Climther</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+
+    <string name="degree">\u00B0C</string>
+    <string name="separator">\u007C</string>
 </resources>
