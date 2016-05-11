@@ -4,6 +4,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
@@ -19,7 +22,11 @@ public class MainActivity extends AppCompatActivity {
     private TextView txtNextDay1;
     private TextView txtNextDay2;
     private TextView txtNextDay3;
+    private ImageView imgWeather;
 
+    private RelativeLayout mainContent;
+    private LinearLayout topContent;
+    private LinearLayout bottomContent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +41,12 @@ public class MainActivity extends AppCompatActivity {
         txtNextDay2 = (TextView) findViewById(R.id.txt_next_day_2);
         txtNextDay3 = (TextView) findViewById(R.id.txt_next_day_3);
 
-        loadToday();
+        imgWeather = (ImageView) findViewById(R.id.img_weather);
+
+        mainContent = (RelativeLayout) findViewById(R.id.main_content);
+        topContent = (LinearLayout) findViewById(R.id.top_content);
+        bottomContent = (LinearLayout) findViewById(R.id.bottom_content);
+
     }
 
     private void loadToday() {
@@ -65,6 +77,28 @@ public class MainActivity extends AppCompatActivity {
         dayName = c.getDisplayName(Calendar.DAY_OF_WEEK, Calendar.LONG, Locale.getDefault());
         txtNextDay3.setText(dayName);
 
+        loadDayNight(hours);
+    }
+
+    private void loadDayNight(int hours) {
+        if ((hours >= 0 && hours <= 6) || (hours >= 19 && hours <= 23)) {
+            topContent.setBackgroundColor(getResources().getColor(R.color.dark_night));
+            mainContent.setBackgroundColor(getResources().getColor(R.color.dark_night_light));
+            bottomContent.setBackgroundColor(getResources().getColor(R.color.dark_night_dark));
+            imgWeather.setImageResource(R.drawable.moon);
+
+        } else {
+            topContent.setBackgroundColor(getResources().getColor(R.color.sky_blue_dark));
+            mainContent.setBackgroundColor(getResources().getColor(R.color.sky_blue));
+            bottomContent.setBackgroundColor(getResources().getColor(R.color.sky_blue_dark_black));
+            imgWeather.setImageResource(R.drawable.sunny);
+        }
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        loadToday();
     }
 
 

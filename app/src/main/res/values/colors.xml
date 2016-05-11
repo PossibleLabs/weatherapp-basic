@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="white">#FFFFFF</color>
+
+    <!-- DAY -->
+    <color name="sky_blue_dark">#5AA2C4</color>
     <color name="sky_blue">#8CBED6</color>
-    <color name="sky_blue_dark">#5aa2c4</color>
-    <color name="sky_blue_dark_2">#2c627b</color>
+    <color name="sky_blue_dark_black">#397fa1</color>
+
+    <!-- NIGHT -->
     <color name="dark_night">#001848</color>
+    <color name="dark_night_light">#002F8C</color>
+    <color name="dark_night_dark">#000104</color>
 </resources>

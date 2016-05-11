@@ -3,19 +3,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/sky_blue"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:id="@+id/main_content">
 
     <FrameLayout
         android:id="@+id/wrapper"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/bottom">
+        android:layout_above="@+id/bottom_content">
 
         <LinearLayout
             android:id="@+id/content"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_above="@+id/bottom"
+            android:layout_above="@+id/bottom_content"
             android:gravity="fill"
             android:orientation="horizontal"
             android:weightSum="2">
@@ -36,7 +37,8 @@
                     android:gravity="bottom"
                     android:orientation="vertical"
                     android:paddingBottom="@dimen/margin_bottom_main"
-                    android:paddingLeft="@dimen/margin_left">
+                    android:paddingLeft="@dimen/margin_left"
+                    android:id="@+id/top_content">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -181,11 +183,11 @@
     </FrameLayout>
 
     <LinearLayout
-        android:id="@+id/bottom"
+        android:id="@+id/bottom_content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="@color/sky_blue_dark_2"
+        android:background="@color/sky_blue_dark_black"
         android:orientation="horizontal"
         android:paddingBottom="@dimen/padding_bottom"
         android:paddingTop="@dimen/padding_bottom"
