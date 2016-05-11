@@ -1,224 +1,238 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@color/sky_blue">
+    android:background="@color/sky_blue"
+    tools:context=".MainActivity">
 
     <FrameLayout
+        android:id="@+id/wrapper"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/wrapper"
         android:layout_above="@+id/bottom">
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/imageView"
-            android:layout_weight="1"
-            android:src="@drawable/sunny"
-            android:layout_marginRight="@dimen/margin_big_icon" />
-
         <LinearLayout
-            android:orientation="horizontal"
+            android:id="@+id/content"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/content"
             android:layout_above="@+id/bottom"
-            android:weightSum="2"
-            android:gravity="fill">
+            android:gravity="fill"
+            android:orientation="horizontal"
+            android:weightSum="2">
 
             <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:layout_marginLeft="@dimen/margin_left"
+                android:orientation="vertical"
                 android:weightSum="2">
 
                 <LinearLayout
-                    android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:gravity="bottom"
                     android:layout_marginBottom="@dimen/margin_bottom_main"
-                    android:paddingBottom="@dimen/margin_bottom_main">
+                    android:layout_weight="1"
+                    android:background="@color/sky_blue_dark"
+                    android:gravity="bottom"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/margin_bottom_main"
+                    android:paddingLeft="@dimen/margin_left">
 
                     <LinearLayout
-                        android:orientation="horizontal"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
-                        <TextView
+                        <com.possiblelabs.weatherapp.gui.BoldTextView
+                            android:id="@+id/txt_main_weather"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="26"
-                            android:id="@+id/txt_main_weather"
+                            android:text="19"
                             android:textColor="@color/white"
                             android:textSize="@dimen/main_weather" />
 
-                        <TextView
+                        <com.possiblelabs.weatherapp.gui.NormalTextView
+                            android:id="@+id/txt_main_format"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/degree"
-                            android:id="@+id/txt_main_format"
                             android:textColor="@color/white"
                             android:textSize="@dimen/main_format" />
 
                     </LinearLayout>
 
                     <LinearLayout
-                        android:orientation="horizontal"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
-                        <TextView
+                        <com.possiblelabs.weatherapp.gui.NormalTextView
+                            android:id="@+id/txt_today"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:paddingRight="@dimen/normal_space"
                             android:text="Lunes"
-                            android:id="@+id/txt_today"
-                            android:textSize="@dimen/normal_text"
                             android:textColor="@color/white"
-                            android:paddingRight="@dimen/normal_space" />
+                            android:textSize="@dimen/normal_text" />
 
-                        <TextView
+                        <com.possiblelabs.weatherapp.gui.NormalTextView
+                            android:id="@+id/textView"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/separator"
-                            android:id="@+id/textView"
-                            android:textSize="@dimen/separator_text"
-                            android:textColor="@color/white" />
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/separator_text" />
 
-                        <TextView
+                        <com.possiblelabs.weatherapp.gui.NormalTextView
+                            android:id="@+id/txt_current_date"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/normal_space"
                             android:text="Mayo 10"
-                            android:id="@+id/txt_current_date"
-                            android:textSize="@dimen/normal_text"
                             android:textColor="@color/white"
-                            android:paddingLeft="@dimen/normal_space" />
+                            android:textSize="@dimen/normal_text" />
                     </LinearLayout>
                 </LinearLayout>
 
                 <LinearLayout
-                    android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
                     android:gravity="top"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/margin_left"
                     android:paddingTop="@dimen/margin_top_main">
 
                     <LinearLayout
-                        android:orientation="horizontal"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
-                        <TextView
+                        <com.possiblelabs.weatherapp.gui.NormalTextView
+                            android:id="@+id/txt_current_hours"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="02"
-                            android:id="@+id/txt_current_hours"
-                            android:textSize="@dimen/time_text"
-                            android:textColor="@color/white" />
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/time_text" />
 
-                        <TextView
+                        <com.possiblelabs.weatherapp.gui.NormalTextView
+                            android:id="@+id/textView3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:padding="@dimen/normal_space"
                             android:text=":"
-                            android:id="@+id/textView3"
-                            android:textSize="@dimen/time_text"
                             android:textColor="@color/white"
-                            android:padding="@dimen/normal_space" />
+                            android:textSize="@dimen/time_text" />
 
-                        <TextView
+                        <com.possiblelabs.weatherapp.gui.NormalTextView
+                            android:id="@+id/txt_current_minutes"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="04"
-                            android:id="@+id/txt_current_minutes"
-                            android:textSize="@dimen/time_text"
-                            android:textColor="@color/white" />
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/time_text" />
                     </LinearLayout>
 
-                    <TextView
+                    <com.possiblelabs.weatherapp.gui.NormalTextView
+                        android:id="@+id/txt_city"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Cochabamba"
-                        android:id="@+id/txt_city"
-                        android:textSize="@dimen/normal_text"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/normal_text" />
 
-                    <TextView
+                    <com.possiblelabs.weatherapp.gui.BoldTextView
+                        android:id="@+id/txt_country"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="BOLIVIA"
-                        android:id="@+id/txt_country"
-                        android:textStyle="bold"
+                        android:textColor="@color/white"
                         android:textSize="@dimen/small_text"
-                        android:textColor="@color/white" />
+                        android:textStyle="bold" />
 
                 </LinearLayout>
 
             </LinearLayout>
 
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:paddingRight="@dimen/margin_left">
+
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView2" />
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/img_weather"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/sunny" />
 
         </LinearLayout>
+
     </FrameLayout>
 
     <LinearLayout
-        android:orientation="horizontal"
+        android:id="@+id/bottom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/bottom"
         android:layout_alignParentBottom="true"
-        android:weightSum="3"
-        android:paddingBottom="@dimen/padding_bottom">
+        android:background="@color/sky_blue_dark_2"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/padding_bottom"
+        android:paddingTop="@dimen/padding_bottom"
+        android:weightSum="3">
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1" >
+            android:layout_weight="1"
+            android:orientation="vertical">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Martes"
+            <com.possiblelabs.weatherapp.gui.NormalTextView
                 android:id="@+id/txt_next_day_1"
-                android:textSize="@dimen/normal_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:gravity="center"
-                android:textColor="@color/white" />
+                android:text="Martes"
+                android:textColor="@color/white"
+                android:textSize="@dimen/normal_text" />
 
             <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/small_icon_size"
                 android:id="@+id/img_next_day_1"
-                android:src="@drawable/sunny"
-                android:layout_margin="@dimen/normal_space" />
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/small_icon_size"
+                android:layout_margin="@dimen/normal_space"
+                android:src="@drawable/raining" />
 
             <LinearLayout
-                android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center_horizontal">
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="26"
+                <com.possiblelabs.weatherapp.gui.NormalTextView
                     android:id="@+id/txt_next_day_1_weather"
-                    android:textSize="@dimen/normal_text"
-                    android:gravity="center"
-                    android:textColor="@color/white" />
-
-                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/degree"
+                    android:gravity="center"
+                    android:text="18"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/normal_text" />
+
+                <com.possiblelabs.weatherapp.gui.NormalTextView
                     android:id="@+id/txt_next_day_1_format"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/degree"
                     android:textColor="@color/white"
                     android:textSize="@dimen/normal_format" />
             </LinearLayout>
@@ -226,94 +240,94 @@
         </LinearLayout>
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:orientation="vertical">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Miércoles"
+            <com.possiblelabs.weatherapp.gui.NormalTextView
                 android:id="@+id/txt_next_day_2"
-                android:textSize="@dimen/normal_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:gravity="center"
-                android:textColor="@color/white" />
+                android:text="Miércoles"
+                android:textColor="@color/white"
+                android:textSize="@dimen/normal_text" />
 
             <ImageView
+                android:id="@+id/img_next_day_2"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/small_icon_size"
-                android:id="@+id/img_next_day_2"
-                android:src="@drawable/sunny"
-                android:layout_margin="@dimen/normal_space" />
+                android:layout_margin="@dimen/normal_space"
+                android:src="@drawable/clouds" />
 
             <LinearLayout
-                android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center_horizontal" >
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
 
-                <TextView
+                <com.possiblelabs.weatherapp.gui.NormalTextView
+                    android:id="@+id/txt_next_day_2_weather"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="26"
-                    android:id="@+id/txt_next_day_2_weather"
-                    android:textSize="@dimen/normal_text"
                     android:gravity="center"
-                    android:textColor="@color/white" />
+                    android:text="22"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/normal_text" />
 
-                <TextView
+                <com.possiblelabs.weatherapp.gui.NormalTextView
+                    android:id="@+id/txt_next_day_2_format"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/degree"
-                    android:id="@+id/txt_next_day_2_format"
                     android:textColor="@color/white"
                     android:textSize="@dimen/normal_format" />
             </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1" >
+            android:layout_weight="1"
+            android:orientation="vertical">
 
-            <TextView
+            <com.possiblelabs.weatherapp.gui.NormalTextView
+                android:id="@+id/txt_next_day_3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Jueves"
-                android:id="@+id/txt_next_day_3"
-                android:textSize="@dimen/normal_text"
                 android:gravity="center"
-                android:textColor="@color/white" />
+                android:text="Jueves"
+                android:textColor="@color/white"
+                android:textSize="@dimen/normal_text" />
 
             <ImageView
+                android:id="@+id/img_next_day_3"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/small_icon_size"
-                android:id="@+id/img_next_day_3"
-                android:src="@drawable/sunny"
-                android:layout_margin="@dimen/normal_space" />
+                android:layout_margin="@dimen/normal_space"
+                android:src="@drawable/sunset" />
 
             <LinearLayout
-                android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center_horizontal" >
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
 
-                <TextView
+                <com.possiblelabs.weatherapp.gui.NormalTextView
+                    android:id="@+id/txt_next_day_3_weather"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="26"
-                    android:id="@+id/txt_next_day_3_weather"
-                    android:textSize="@dimen/normal_text"
                     android:gravity="center"
-                    android:textColor="@color/white" />
+                    android:text="18"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/normal_text" />
 
-                <TextView
+                <com.possiblelabs.weatherapp.gui.NormalTextView
+                    android:id="@+id/txt_next_day_3_format"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/degree"
-                    android:id="@+id/txt_next_day_3_format"
                     android:textColor="@color/white"
                     android:textSize="@dimen/normal_format" />
             </LinearLayout>

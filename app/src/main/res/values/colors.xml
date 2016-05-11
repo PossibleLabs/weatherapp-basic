@@ -2,5 +2,7 @@
 <resources>
     <color name="white">#FFFFFF</color>
     <color name="sky_blue">#8CBED6</color>
+    <color name="sky_blue_dark">#5aa2c4</color>
+    <color name="sky_blue_dark_2">#2c627b</color>
     <color name="dark_night">#001848</color>
 </resources>
