@@ -176,7 +176,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:src="@drawable/sunny" />
+                android:src="@drawable/clear_sky_day" />
 
         </LinearLayout>
 
@@ -213,7 +213,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/small_icon_size"
                 android:layout_margin="@dimen/normal_space"
-                android:src="@drawable/raining" />
+                android:src="@drawable/rain_day" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -261,7 +261,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/small_icon_size"
                 android:layout_margin="@dimen/normal_space"
-                android:src="@drawable/clouds" />
+                android:src="@drawable/few_clouds_day" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -308,7 +308,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/small_icon_size"
                 android:layout_margin="@dimen/normal_space"
-                android:src="@drawable/sunset" />
+                android:src="@drawable/snow_day" />
 
             <LinearLayout
                 android:layout_width="match_parent"

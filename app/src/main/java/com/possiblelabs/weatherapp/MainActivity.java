@@ -44,15 +44,12 @@ public class MainActivity extends AppCompatActivity {
         txtNextDay1 = (TextView) findViewById(R.id.txt_next_day_1);
         txtNextDay2 = (TextView) findViewById(R.id.txt_next_day_2);
         txtNextDay3 = (TextView) findViewById(R.id.txt_next_day_3);
-
         imgWeather = (ImageView) findViewById(R.id.img_weather);
-
         mainContent = (RelativeLayout) findViewById(R.id.main_content);
         topContent = (LinearLayout) findViewById(R.id.top_content);
         bottomContent = (LinearLayout) findViewById(R.id.bottom_content);
 
         cityDAO = CityDAO.getInstance(this);
-
     }
 
     private void loadToday() {
@@ -91,13 +88,13 @@ public class MainActivity extends AppCompatActivity {
             topContent.setBackgroundColor(getResources().getColor(R.color.dark_night));
             mainContent.setBackgroundColor(getResources().getColor(R.color.dark_night_light));
             bottomContent.setBackgroundColor(getResources().getColor(R.color.dark_night_dark));
-            imgWeather.setImageResource(R.drawable.moon);
+            imgWeather.setImageResource(R.drawable.clear_sky_night);
 
         } else {
             topContent.setBackgroundColor(getResources().getColor(R.color.sky_blue_dark));
             mainContent.setBackgroundColor(getResources().getColor(R.color.sky_blue));
             bottomContent.setBackgroundColor(getResources().getColor(R.color.sky_blue_dark_black));
-            imgWeather.setImageResource(R.drawable.sunny);
+            imgWeather.setImageResource(R.drawable.clear_sky_day);
         }
     }
 
