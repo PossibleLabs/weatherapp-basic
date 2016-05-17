@@ -9,6 +9,8 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.possiblelabs.weatherapp.db.CityDAO;
+
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
@@ -28,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
     private LinearLayout topContent;
     private LinearLayout bottomContent;
 
+    private CityDAO cityDAO;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,6 +50,8 @@ public class MainActivity extends AppCompatActivity {
         mainContent = (RelativeLayout) findViewById(R.id.main_content);
         topContent = (LinearLayout) findViewById(R.id.top_content);
         bottomContent = (LinearLayout) findViewById(R.id.bottom_content);
+
+        cityDAO = CityDAO.getInstance(this);
 
     }
 
