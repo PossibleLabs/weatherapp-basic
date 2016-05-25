@@ -2,6 +2,7 @@ package com.possiblelabs.weatherapp;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
@@ -10,6 +11,9 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.possiblelabs.weatherapp.db.CityDAO;
+import com.possiblelabs.weatherapp.dto.GetWeather;
+import com.possiblelabs.weatherapp.dto.ServiceWether;
+import com.possiblelabs.weatherapp.dto.Weather;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -50,6 +54,13 @@ public class MainActivity extends AppCompatActivity {
         bottomContent = (LinearLayout) findViewById(R.id.bottom_content);
 
         cityDAO = CityDAO.getInstance(this);
+        String url = "http://api.openweathermap.org/data/2.5/weather?id=" + "2172797" + "&lang=es&APPID=17951532fcfc8ed6c64106273a4fbdb6";
+        ServiceWether.getInstance().loadWeatherTest(new GetWeather() {
+            @Override
+            public void loadWeather(Weather weather) {
+                Log.d("WeatherDescription", weather.getDescription());
+            }
+        });
     }
 
     private void loadToday() {
