@@ -24,8 +24,8 @@ public class CityDAO {
         citiesDatabase = initializeDB();
     }
 
-    public static CityDAO getInstance(Context context){
-        if(instance == null)
+    public static CityDAO getInstance(Context context) {
+        if (instance == null)
             instance = new CityDAO(context);
         return instance;
     }
@@ -51,7 +51,20 @@ public class CityDAO {
         Cursor c = citiesDatabase.query("city", fields, "countryCode=?", args, null, null, null);
         if (c.moveToFirst()) {
             do {
-                City city = setAtributes(c);
+                City city = createCity(c);
+                cities.add(city);
+            } while (c.moveToNext());
+        }
+        return cities;
+    }
+
+    public List<City> getAllCities() {
+        List<City> cities = new ArrayList<>();
+        String[] fields = new String[]{"id, nm, lat, lon, countryCode"};
+        Cursor c = citiesDatabase.query("city", fields, null, null, null, null, null);
+        if (c.moveToFirst()) {
+            do {
+                City city = createCity(c);
                 cities.add(city);
             } while (c.moveToNext());
         }
@@ -63,17 +76,17 @@ public class CityDAO {
         String[] args = new String[]{cityId + ""};
         Cursor c = citiesDatabase.query("city", fields, "id=?", args, null, null, null);
         if (c.moveToFirst()) {
-            City city = setAtributes(c);
+            City city = createCity(c);
             return city;
         }
         return null;
     }
 
-    public void deleteCity(City city){
+    public void deleteCity(City city) {
         citiesDatabase.execSQL("DELETE FROM city WHERE id=" + city.getId());
     }
 
-    public void updateCity(City city){
+    public void updateCity(City city) {
         ContentValues values = new ContentValues();
         values.put("nm", city.getName());
         values.put("lat", city.getLatitude());
@@ -81,7 +94,7 @@ public class CityDAO {
         citiesDatabase.update("city", values, "id=" + city.getId(), null);
     }
 
-    public City setAtributes(Cursor c){
+    public City createCity(Cursor c) {
         int id = c.getInt(0);
         String nm = c.getString(1);
         double lat = c.getDouble(2);

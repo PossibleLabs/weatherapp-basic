@@ -1,0 +1,818 @@
+{
+  "city": {
+    "id": 3919968,
+    "name": "Cochabamba",
+    "coord": {
+      "lon": -66.156799,
+      "lat": -17.3895
+    },
+    "country": "BO",
+    "population": 0,
+    "sys": {
+      "population": 0
+    }
+  },
+  "cod": "200",
+  "message": 0.0036,
+  "cnt": 24,
+  "list": [
+    {
+      "dt": 1464328800,
+      "main": {
+        "temp": 7.91,
+        "temp_min": -4.07,
+        "temp_max": 7.91,
+        "pressure": 674.7,
+        "sea_level": 1030.47,
+        "grnd_level": 674.7,
+        "humidity": 81,
+        "temp_kf": 11.97
+      },
+      "weather": [
+        {
+          "id": 500,
+          "main": "Rain",
+          "description": "lluvia ligera",
+          "icon": "10n"
+        }
+      ],
+      "clouds": {
+        "all": 20
+      },
+      "wind": {
+        "speed": 0.96,
+        "deg": 310.003
+      },
+      "rain": {
+        "3h": 0.0075
+      },
+      "sys": {
+        "pod": "n"
+      },
+      "dt_txt": "2016-05-27 06:00:00"
+    },
+    {
+      "dt": 1464339600,
+      "main": {
+        "temp": 8.8,
+        "temp_min": -2.51,
+        "temp_max": 8.8,
+        "pressure": 674.49,
+        "sea_level": 1031.16,
+        "grnd_level": 674.49,
+        "humidity": 74,
+        "temp_kf": 11.31
+      },
+      "weather": [
+        {
+          "id": 500,
+          "main": "Rain",
+          "description": "lluvia ligera",
+          "icon": "10n"
+        }
+      ],
+      "clouds": {
+        "all": 24
+      },
+      "wind": {
+        "speed": 1.07,
+        "deg": 296.501
+      },
+      "rain": {
+        "3h": 0.015
+      },
+      "sys": {
+        "pod": "n"
+      },
+      "dt_txt": "2016-05-27 09:00:00"
+    },
+    {
+      "dt": 1464350400,
+      "main": {
+        "temp": 9.44,
+        "temp_min": -1.21,
+        "temp_max": 9.44,
+        "pressure": 675.13,
+        "sea_level": 1032.78,
+        "grnd_level": 675.13,
+        "humidity": 77,
+        "temp_kf": 10.64
+      },
+      "weather": [
+        {
+          "id": 500,
+          "main": "Rain",
+          "description": "lluvia ligera",
+          "icon": "10d"
+        }
+      ],
+      "clouds": {
+        "all": 32
+      },
+      "wind": {
+        "speed": 0.82,
+        "deg": 310.008
+      },
+      "rain": {
+        "3h": 0.0075
+      },
+      "sys": {
+        "pod": "d"
+      },
+      "dt_txt": "2016-05-27 12:00:00"
+    },
+    {
+      "dt": 1464361200,
+      "main": {
+        "temp": 20.25,
+        "temp_min": 10.28,
+        "temp_max": 20.25,
+        "pressure": 675.08,
+        "sea_level": 1029.86,
+        "grnd_level": 675.08,
+        "humidity": 48,
+        "temp_kf": 9.98
+      },
+      "weather": [
+        {
+          "id": 800,
+          "main": "Clear",
+          "description": "cielo claro",
+          "icon": "01d"
+        }
+      ],
+      "clouds": {
+        "all": 0
+      },
+      "wind": {
+        "speed": 0.98,
+        "deg": 318.501
+      },
+      "rain": {},
+      "sys": {
+        "pod": "d"
+      },
+      "dt_txt": "2016-05-27 15:00:00"
+    },
+    {
+      "dt": 1464372000,
+      "main": {
+        "temp": 26.12,
+        "temp_min": 16.8,
+        "temp_max": 26.12,
+        "pressure": 672.31,
+        "sea_level": 1024.02,
+        "grnd_level": 672.31,
+        "humidity": 18,
+        "temp_kf": 9.31
+      },
+      "weather": [
+        {
+          "id": 800,
+          "main": "Clear",
+          "description": "cielo claro",
+          "icon": "01d"
+        }
+      ],
+      "clouds": {
+        "all": 0
+      },
+      "wind": {
+        "speed": 1.07,
+        "deg": 307.5
+      },
+      "rain": {},
+      "sys": {
+        "pod": "d"
+      },
+      "dt_txt": "2016-05-27 18:00:00"
+    },
+    {
+      "dt": 1464382800,
+      "main": {
+        "temp": 23.8,
+        "temp_min": 15.15,
+        "temp_max": 23.8,
+        "pressure": 671.41,
+        "sea_level": 1023.11,
+        "grnd_level": 671.41,
+        "humidity": 15,
+        "temp_kf": 8.65
+      },
+      "weather": [
+        {
+          "id": 802,
+          "main": "Clouds",
+          "description": "nubes dispersas",
+          "icon": "03d"
+        }
+      ],
+      "clouds": {
+        "all": 36
+      },
+      "wind": {
+        "speed": 1.32,
+        "deg": 270.002
+      },
+      "rain": {},
+      "sys": {
+        "pod": "d"
+      },
+      "dt_txt": "2016-05-27 21:00:00"
+    },
+    {
+      "dt": 1464393600,
+      "main": {
+        "temp": 13.42,
+        "temp_min": 5.43,
+        "temp_max": 13.42,
+        "pressure": 672.75,
+        "sea_level": 1027.29,
+        "grnd_level": 672.75,
+        "humidity": 29,
+        "temp_kf": 7.98
+      },
+      "weather": [
+        {
+          "id": 801,
+          "main": "Clouds",
+          "description": "algo de nubes",
+          "icon": "02n"
+        }
+      ],
+      "clouds": {
+        "all": 12
+      },
+      "wind": {
+        "speed": 1.22,
+        "deg": 269.5
+      },
+      "rain": {},
+      "sys": {
+        "pod": "n"
+      },
+      "dt_txt": "2016-05-28 00:00:00"
+    },
+    {
+      "dt": 1464404400,
+      "main": {
+        "temp": 6.14,
+        "temp_min": -1.18,
+        "temp_max": 6.14,
+        "pressure": 674.33,
+        "sea_level": 1030.63,
+        "grnd_level": 674.33,
+        "humidity": 42,
+        "temp_kf": 7.32
+      },
+      "weather": [
+        {
+          "id": 800,
+          "main": "Clear",
+          "description": "cielo claro",
+          "icon": "01n"
+        }
+      ],
+      "clouds": {
+        "all": 0
+      },
+      "wind": {
+        "speed": 1.06,
+        "deg": 256.001
+      },
+      "rain": {},
+      "sys": {
+        "pod": "n"
+      },
+      "dt_txt": "2016-05-28 03:00:00"
+    },
+    {
+      "dt": 1464415200,
+      "main": {
+        "temp": 1.44,
+        "temp_min": -5.22,
+        "temp_max": 1.44,
+        "pressure": 674.36,
+        "sea_level": 1031.63,
+        "grnd_level": 674.36,
+        "humidity": 47,
+        "temp_kf": 6.65
+      },
+      "weather": [
+        {
+          "id": 800,
+          "main": "Clear",
+          "description": "cielo claro",
+          "icon": "01n"
+        }
+      ],
+      "clouds": {
+        "all": 0
+      },
+      "wind": {
+        "speed": 0.9,
+        "deg": 276.008
+      },
+      "rain": {},
+      "sys": {
+        "pod": "n"
+      },
+      "dt_txt": "2016-05-28 06:00:00"
+    },
+    {
+      "dt": 1464426000,
+      "main": {
+        "temp": -1.61,
+        "temp_min": -7.59,
+        "temp_max": -1.61,
+        "pressure": 674.33,
+        "sea_level": 1032.55,
+        "grnd_level": 674.33,
+        "humidity": 62,
+        "temp_kf": 5.99
+      },
+      "weather": [
+        {
+          "id": 800,
+          "main": "Clear",
+          "description": "cielo claro",
+          "icon": "01n"
+        }
+      ],
+      "clouds": {
+        "all": 0
+      },
+      "wind": {
+        "speed": 0.81,
+        "deg": 293.003
+      },
+      "rain": {},
+      "sys": {
+        "pod": "n"
+      },
+      "dt_txt": "2016-05-28 09:00:00"
+    },
+    {
+      "dt": 1464436800,
+      "main": {
+        "temp": 1.05,
+        "temp_min": -4.28,
+        "temp_max": 1.05,
+        "pressure": 675.33,
+        "sea_level": 1034.74,
+        "grnd_level": 675.33,
+        "humidity": 61,
+        "temp_kf": 5.32
+      },
+      "weather": [
+        {
+          "id": 800,
+          "main": "Clear",
+          "description": "cielo claro",
+          "icon": "01d"
+        }
+      ],
+      "clouds": {
+        "all": 0
+      },
+      "wind": {
+        "speed": 0.86,
+        "deg": 277.001
+      },
+      "rain": {},
+      "sys": {
+        "pod": "d"
+      },
+      "dt_txt": "2016-05-28 12:00:00"
+    },
+    {
+      "dt": 1464447600,
+      "main": {
+        "temp": 18.9,
+        "temp_min": 14.24,
+        "temp_max": 18.9,
+        "pressure": 675.69,
+        "sea_level": 1032.23,
+        "grnd_level": 675.69,
+        "humidity": 15,
+        "temp_kf": 4.66
+      },
+      "weather": [
+        {
+          "id": 800,
+          "main": "Clear",
+          "description": "cielo claro",
+          "icon": "01d"
+        }
+      ],
+      "clouds": {
+        "all": 0
+      },
+      "wind": {
+        "speed": 0.4,
+        "deg": 252.501
+      },
+      "rain": {},
+      "sys": {
+        "pod": "d"
+      },
+      "dt_txt": "2016-05-28 15:00:00"
+    },
+    {
+      "dt": 1464458400,
+      "main": {
+        "temp": 21.47,
+        "temp_min": 17.48,
+        "temp_max": 21.47,
+        "pressure": 673.44,
+        "sea_level": 1026.57,
+        "grnd_level": 673.44,
+        "humidity": 14,
+        "temp_kf": 3.99
+      },
+      "weather": [
+        {
+          "id": 800,
+          "main": "Clear",
+          "description": "cielo claro",
+          "icon": "01d"
+        }
+      ],
+      "clouds": {
+        "all": 0
+      },
+      "wind": {
+        "speed": 1.27,
+        "deg": 241.507
+      },
+      "rain": {},
+      "sys": {
+        "pod": "d"
+      },
+      "dt_txt": "2016-05-28 18:00:00"
+    },
+    {
+      "dt": 1464469200,
+      "main": {
+        "temp": 18.9,
+        "temp_min": 15.57,
+        "temp_max": 18.9,
+        "pressure": 672.82,
+        "sea_level": 1025.75,
+        "grnd_level": 672.82,
+        "humidity": 14,
+        "temp_kf": 3.33
+      },
+      "weather": [
+        {
+          "id": 800,
+          "main": "Clear",
+          "description": "cielo claro",
+          "icon": "01d"
+        }
+      ],
+      "clouds": {
+        "all": 0
+      },
+      "wind": {
+        "speed": 1.23,
+        "deg": 232.5
+      },
+      "rain": {},
+      "sys": {
+        "pod": "d"
+      },
+      "dt_txt": "2016-05-28 21:00:00"
+    },
+    {
+      "dt": 1464480000,
+      "main": {
+        "temp": 5.52,
+        "temp_min": 2.85,
+        "temp_max": 5.52,
+        "pressure": 673.92,
+        "sea_level": 1030.05,
+        "grnd_level": 673.92,
+        "humidity": 40,
+        "temp_kf": 2.66
+      },
+      "weather": [
+        {
+          "id": 800,
+          "main": "Clear",
+          "description": "cielo claro",
+          "icon": "02n"
+        }
+      ],
+      "clouds": {
+        "all": 8
+      },
+      "wind": {
+        "speed": 0.61,
+        "deg": 218.502
+      },
+      "rain": {},
+      "sys": {
+        "pod": "n"
+      },
+      "dt_txt": "2016-05-29 00:00:00"
+    },
+    {
+      "dt": 1464490800,
+      "main": {
+        "temp": 0.05,
+        "temp_min": -1.95,
+        "temp_max": 0.05,
+        "pressure": 675.03,
+        "sea_level": 1032.91,
+        "grnd_level": 675.03,
+        "humidity": 61,
+        "temp_kf": 2
+      },
+      "weather": [
+        {
+          "id": 800,
+          "main": "Clear",
+          "description": "cielo claro",
+          "icon": "01n"
+        }
+      ],
+      "clouds": {
+        "all": 0
+      },
+      "wind": {
+        "speed": 0.56,
+        "deg": 300.502
+      },
+      "rain": {},
+      "sys": {
+        "pod": "n"
+      },
+      "dt_txt": "2016-05-29 03:00:00"
+    },
+    {
+      "dt": 1464501600,
+      "main": {
+        "temp": -3.53,
+        "temp_min": -4.87,
+        "temp_max": -3.53,
+        "pressure": 675.14,
+        "sea_level": 1033.65,
+        "grnd_level": 675.14,
+        "humidity": 61,
+        "temp_kf": 1.33
+      },
+      "weather": [
+        {
+          "id": 800,
+          "main": "Clear",
+          "description": "cielo claro",
+          "icon": "01n"
+        }
+      ],
+      "clouds": {
+        "all": 0
+      },
+      "wind": {
+        "speed": 0.77,
+        "deg": 259.005
+      },
+      "rain": {},
+      "sys": {
+        "pod": "n"
+      },
+      "dt_txt": "2016-05-29 06:00:00"
+    },
+    {
+      "dt": 1464512400,
+      "main": {
+        "temp": -6.3,
+        "temp_min": -6.97,
+        "temp_max": -6.3,
+        "pressure": 674.61,
+        "sea_level": 1033.5,
+        "grnd_level": 674.61,
+        "humidity": 63,
+        "temp_kf": 0.67
+      },
+      "weather": [
+        {
+          "id": 800,
+          "main": "Clear",
+          "description": "cielo claro",
+          "icon": "01n"
+        }
+      ],
+      "clouds": {
+        "all": 0
+      },
+      "wind": {
+        "speed": 0.77,
+        "deg": 257.503
+      },
+      "rain": {},
+      "sys": {
+        "pod": "n"
+      },
+      "dt_txt": "2016-05-29 09:00:00"
+    },
+    {
+      "dt": 1464523200,
+      "main": {
+        "temp": -4.03,
+        "temp_min": -4.03,
+        "temp_max": -4.03,
+        "pressure": 675.57,
+        "sea_level": 1034.82,
+        "grnd_level": 675.57,
+        "humidity": 57,
+        "temp_kf": 0
+      },
+      "weather": [
+        {
+          "id": 800,
+          "main": "Clear",
+          "description": "cielo claro",
+          "icon": "01d"
+        }
+      ],
+      "clouds": {
+        "all": 0
+      },
+      "wind": {
+        "speed": 0.71,
+        "deg": 257.503
+      },
+      "rain": {},
+      "sys": {
+        "pod": "d"
+      },
+      "dt_txt": "2016-05-29 12:00:00"
+    },
+    {
+      "dt": 1464534000,
+      "main": {
+        "temp": 15.51,
+        "temp_min": 15.51,
+        "temp_max": 15.51,
+        "pressure": 675.83,
+        "sea_level": 1030.62,
+        "grnd_level": 675.83,
+        "humidity": 16,
+        "temp_kf": 0
+      },
+      "weather": [
+        {
+          "id": 800,
+          "main": "Clear",
+          "description": "cielo claro",
+          "icon": "01d"
+        }
+      ],
+      "clouds": {
+        "all": 0
+      },
+      "wind": {
+        "speed": 0.87,
+        "deg": 244.502
+      },
+      "rain": {},
+      "sys": {
+        "pod": "d"
+      },
+      "dt_txt": "2016-05-29 15:00:00"
+    },
+    {
+      "dt": 1464544800,
+      "main": {
+        "temp": 17.94,
+        "temp_min": 17.94,
+        "temp_max": 17.94,
+        "pressure": 673.57,
+        "sea_level": 1024.12,
+        "grnd_level": 673.57,
+        "humidity": 13,
+        "temp_kf": 0
+      },
+      "weather": [
+        {
+          "id": 800,
+          "main": "Clear",
+          "description": "cielo claro",
+          "icon": "01d"
+        }
+      ],
+      "clouds": {
+        "all": 0
+      },
+      "wind": {
+        "speed": 1.43,
+        "deg": 247.001
+      },
+      "rain": {},
+      "sys": {
+        "pod": "d"
+      },
+      "dt_txt": "2016-05-29 18:00:00"
+    },
+    {
+      "dt": 1464555600,
+      "main": {
+        "temp": 15.63,
+        "temp_min": 15.63,
+        "temp_max": 15.63,
+        "pressure": 672.56,
+        "sea_level": 1022.69,
+        "grnd_level": 672.56,
+        "humidity": 12,
+        "temp_kf": 0
+      },
+      "weather": [
+        {
+          "id": 800,
+          "main": "Clear",
+          "description": "cielo claro",
+          "icon": "01d"
+        }
+      ],
+      "clouds": {
+        "all": 0
+      },
+      "wind": {
+        "speed": 1.41,
+        "deg": 240
+      },
+      "rain": {},
+      "sys": {
+        "pod": "d"
+      },
+      "dt_txt": "2016-05-29 21:00:00"
+    },
+    {
+      "dt": 1464566400,
+      "main": {
+        "temp": 2.77,
+        "temp_min": 2.77,
+        "temp_max": 2.77,
+        "pressure": 673.4,
+        "sea_level": 1026.4,
+        "grnd_level": 673.4,
+        "humidity": 30,
+        "temp_kf": 0
+      },
+      "weather": [
+        {
+          "id": 800,
+          "main": "Clear",
+          "description": "cielo claro",
+          "icon": "01n"
+        }
+      ],
+      "clouds": {
+        "all": 0
+      },
+      "wind": {
+        "speed": 1.11,
+        "deg": 242.004
+      },
+      "rain": {},
+      "sys": {
+        "pod": "n"
+      },
+      "dt_txt": "2016-05-30 00:00:00"
+    },
+    {
+      "dt": 1464577200,
+      "main": {
+        "temp": -2.09,
+        "temp_min": -2.09,
+        "temp_max": -2.09,
+        "pressure": 674.29,
+        "sea_level": 1028.52,
+        "grnd_level": 674.29,
+        "humidity": 41,
+        "temp_kf": 0
+      },
+      "weather": [
+        {
+          "id": 800,
+          "main": "Clear",
+          "description": "cielo claro",
+          "icon": "01n"
+        }
+      ],
+      "clouds": {
+        "all": 0
+      },
+      "wind": {
+        "speed": 1.33,
+        "deg": 224.001
+      },
+      "rain": {},
+      "sys": {
+        "pod": "n"
+      },
+      "dt_txt": "2016-05-30 03:00:00"
+    }
+  ]
+}

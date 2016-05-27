@@ -1,0 +1,41 @@
+{
+  "coord": {
+    "lon": -66.16,
+    "lat": -17.39
+  },
+  "weather": [
+    {
+      "id": 801,
+      "main": "Clouds",
+      "description": "algo de nubes",
+      "icon": "02n"
+    }
+  ],
+  "base": "cmc stations",
+  "main": {
+    "temp": 292.15,
+    "pressure": 1023,
+    "humidity": 25,
+    "temp_min": 292.15,
+    "temp_max": 292.15
+  },
+  "wind": {
+    "speed": 2.1,
+    "deg": 130
+  },
+  "clouds": {
+    "all": 20
+  },
+  "dt": 1464303600,
+  "sys": {
+    "type": 1,
+    "id": 4417,
+    "message": 0.0024,
+    "country": "BO",
+    "sunrise": 1464259576,
+    "sunset": 1464299842
+  },
+  "id": 3919968,
+  "name": "Cochabamba",
+  "cod": 200
+}

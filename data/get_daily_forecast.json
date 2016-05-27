@@ -1,0 +1,92 @@
+{
+  "city": {
+    "id": 3919968,
+    "name": "Cochabamba",
+    "coord": {
+      "lon": -66.156799,
+      "lat": -17.3895
+    },
+    "country": "BO",
+    "population": 0
+  },
+  "cod": "200",
+  "message": 0.008,
+  "cnt": 3,
+  "list": [
+    {
+      "dt": 1464278400,
+      "temp": {
+        "day": 15,
+        "min": 13.58,
+        "max": 15,
+        "night": 13.58,
+        "eve": 15,
+        "morn": 15
+      },
+      "pressure": 832.14,
+      "humidity": 97,
+      "weather": [
+        {
+          "id": 501,
+          "main": "Rain",
+          "description": "lluvia moderada",
+          "icon": "10d"
+        }
+      ],
+      "speed": 0.53,
+      "deg": 34,
+      "clouds": 92,
+      "rain": 4.49
+    },
+    {
+      "dt": 1464364800,
+      "temp": {
+        "day": 13.15,
+        "min": 11.99,
+        "max": 14.12,
+        "night": 12.24,
+        "eve": 13.1,
+        "morn": 12.25
+      },
+      "pressure": 834.12,
+      "humidity": 100,
+      "weather": [
+        {
+          "id": 501,
+          "main": "Rain",
+          "description": "lluvia moderada",
+          "icon": "10d"
+        }
+      ],
+      "speed": 1.13,
+      "deg": 51,
+      "clouds": 92,
+      "rain": 8.1
+    },
+    {
+      "dt": 1464451200,
+      "temp": {
+        "day": 12.05,
+        "min": 8,
+        "max": 12.07,
+        "night": 8,
+        "eve": 11.7,
+        "morn": 11
+      },
+      "pressure": 835.3,
+      "humidity": 96,
+      "weather": [
+        {
+          "id": 501,
+          "main": "Rain",
+          "description": "lluvia moderada",
+          "icon": "10d"
+        }
+      ],
+      "speed": 1.2,
+      "deg": 50,
+      "clouds": 88,
+      "rain": 3.3
+    }
+  ]
+}

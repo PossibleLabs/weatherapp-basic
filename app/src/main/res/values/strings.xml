@@ -6,9 +6,4 @@
 
     <string name="degree">\u00B0C</string>
     <string name="separator">\u007C</string>
-
-    <string formatted="false" name="UrlOpenWeatherIdCity">http://api.openweathermap.org/data/2.5/weather?id=%1$s&amp;lang=%2$s&amp;APPID=%3$s</string>
-    <string formatted="false" name="UrlOpenWeatherIdCityDefault">http://api.openweathermap.org/data/2.5/weather?id=%1$s&amp;APPID=%2$s</string>
-    <string formatted="false" name="UrlOpenWeatheNameCity">http://api.openweathermap.org/data/2.5/weather?q=%1$s&amp;lang=%2$s&amp;APPID=%3$s</string>
-    <string name="keyOpenWeatherApp">17951532fcfc8ed6c64106273a4fbdb6</string>
 </resources>

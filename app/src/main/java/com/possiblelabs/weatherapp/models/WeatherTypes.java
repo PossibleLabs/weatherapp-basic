@@ -33,4 +33,22 @@ public enum WeatherTypes {
             return this.name().toLowerCase() + "_night";
     }
 
+    private static String getSuffixIcon(String base) {
+        if (base.equalsIgnoreCase("n"))
+            return "_night";
+        else
+            return "_day";
+    }
+
+    public static String getWeatherTypeFromIcon(String icon) {
+        for (WeatherTypes wt : WeatherTypes.values()) {
+            String prefix = icon.substring(0, 2);
+            String suffix = icon.substring(2, 3);
+            if (wt.code.equalsIgnoreCase(prefix))
+                return wt.name().toLowerCase() + getSuffixIcon(suffix);
+        }
+        return null;
+    }
+
+
 }
