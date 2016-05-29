@@ -10,6 +10,7 @@
     <dimen name="normal_space">5dp</dimen>
     <dimen name="time_text">35sp</dimen>
     <dimen name="small_text">16sp</dimen>
+    <dimen name="main_title">30sp</dimen>
 
     <dimen name="big_icon_size">300dp</dimen>
     <dimen name="margin_big_icon">-400dp</dimen>
@@ -19,4 +20,12 @@
     <dimen name="margin_bottom_main">20sp</dimen>
     <dimen name="margin_top_main">20sp</dimen>
     <dimen name="padding_bottom">10sp</dimen>
+
+    <dimen name="settings_size">44dp</dimen>
+    <dimen name="settings_padding">10dp</dimen>
+    <dimen name="item_height">60dp</dimen>
+    <dimen name="search_height">60dp</dimen>
+    <dimen name="search_width">90dp</dimen>
+    <dimen name="search_padding">10dp</dimen>
+
 </resources>

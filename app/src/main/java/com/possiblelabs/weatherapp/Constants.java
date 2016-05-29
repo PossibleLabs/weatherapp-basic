@@ -11,6 +11,8 @@ public interface Constants {
     public static final String DEGREES_MEASURE = " Grados C";
     public static final String PRESSURE_MEASURE = " mb";
     public static final String PERCENTAGE = "%";
+    public static final String CITY_ID = "CITY_ID";
+    public static final int CITY_REQUEST_CODE = 123;
 
     //SERVICE CONFIGURATION
     public static final String OPEN_WEATHER_APP_ID = "17951532fcfc8ed6c64106273a4fbdb6";//TODO: re-generate this before to deploy to Google Play Store.

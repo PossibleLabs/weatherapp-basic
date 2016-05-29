@@ -55,6 +55,10 @@ public class City {
         this.countryCode = countryCode;
     }
 
+    public String toStringFormatted() {
+        return name + ", " + countryCode;
+    }
+
     @Override
     public String toString() {
         return "City{" +

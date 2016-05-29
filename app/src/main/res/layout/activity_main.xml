@@ -176,9 +176,20 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:src="@drawable/clear_sky_day" />
+                android:src="@drawable/clear_sky_day"
+                android:background="@android:color/transparent" />
 
         </LinearLayout>
+
+        <ImageButton
+            android:layout_width="@dimen/settings_size"
+            android:layout_height="@dimen/settings_size"
+            android:id="@+id/btn_settings"
+            android:layout_gravity="right"
+            android:src="@drawable/settings"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            android:padding="@dimen/settings_padding" />
 
     </FrameLayout>
 

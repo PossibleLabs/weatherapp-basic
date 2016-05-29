@@ -17,6 +17,7 @@ public class GetForecast3DaysTask extends AsyncTask<String, Void, Weather[]> {
 
     private AndroidHttpClient client;
     private GetForecast3DaysCallback callback;
+    //Cache
     private Weather[] weathers;
 
     public GetForecast3DaysTask(GetForecast3DaysCallback callback) {

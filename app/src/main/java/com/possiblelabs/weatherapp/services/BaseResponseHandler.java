@@ -24,6 +24,20 @@ public class BaseResponseHandler {
         }
     }
 
+    protected void loadMainDataFromForecast(JSONObject baseObject, Weather weather) {
+        try {
+            weather.setHumidity(baseObject.getDouble("humidity"));
+            weather.setPressure(baseObject.getDouble("pressure"));
+            JSONObject tempObj = baseObject.getJSONObject("temp");
+            weather.setCurrentTemperature(tempObj.getDouble("day"));
+            weather.setTempMin(tempObj.getDouble("min"));
+            weather.setTempMax(tempObj.getDouble("max"));
+
+        } catch (JSONException jse) {
+            jse.printStackTrace();
+        }
+    }
+
     protected void loadWeather(JSONObject baseObject, Weather weather) {
         try {
             JSONArray weatherArray = baseObject.getJSONArray("weather");

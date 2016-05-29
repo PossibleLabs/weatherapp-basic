@@ -1,9 +1,12 @@
 package com.possiblelabs.weatherapp.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -40,6 +43,10 @@ public class MainActivity extends BaseActivity {
     private TextView txtNextDay1Weather;
     private TextView txtNextDay2Weather;
     private TextView txtNextDay3Weather;
+    private ImageView imgNextDay1;
+    private ImageView imgNextDay2;
+    private ImageView imgNextDay3;
+    private ImageButton btnSettings;
 
     //Containers
     private RelativeLayout mainContent;
@@ -47,11 +54,58 @@ public class MainActivity extends BaseActivity {
     private LinearLayout bottomContent;
 
     //Cache
-    private Weather weather;
+    private Weather currentWeather;
+    private City city;
+    private int cityId = DEFAULT_CITY_ID;
 
     //Services
     private WeatherService weatherService;
     private CityDAO cityDAO;
+
+    //Callbacks
+    private GetForecast3DaysCallback forecast3DaysCallback = new GetForecast3DaysCallback() {
+        @Override
+        public void loadForecast3Days(Weather[] weathers) {
+            Log.d(TAG, "loadForecast3Days");
+
+
+            if (weathers == null || weathers.length != 3)
+                return;
+
+            txtNextDay1Weather.setText(weathers[0].getCurrentTemperatureString());
+            imgNextDay1.setImageResource(getImageResourceId(weathers[0]));
+            txtNextDay2Weather.setText(weathers[1].getCurrentTemperatureString());
+            imgNextDay2.setImageResource(getImageResourceId(weathers[1]));
+            txtNextDay3Weather.setText(weathers[2].getCurrentTemperatureString());
+            imgNextDay3.setImageResource(getImageResourceId(weathers[2]));
+        }
+    };
+
+    private GetWeatherCallback weatherCallback = new GetWeatherCallback() {
+        @Override
+        public void loadWeather(Weather weather) {
+            Log.d(TAG, "loadWeather");
+
+            if (weather == null)
+                return;
+
+            Log.d(TAG, "Weather=" + weather.getDescription());
+            txtCity.setText(weather.getName());
+            txtCountry.setText(city.getCountryCode());
+            txtMainWeather.setText(weather.getCurrentTemperatureString());
+            MainActivity.this.currentWeather = weather;
+
+            loadToday();
+        }
+    };
+
+    private View.OnClickListener settingsClick = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent intent = new Intent(MainActivity.this, CitiesActivity.class);
+            startActivityForResult(intent, CITY_REQUEST_CODE);
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,11 +130,34 @@ public class MainActivity extends BaseActivity {
         txtNextDay1Weather = (TextView) findViewById(R.id.txt_next_day_1_weather);
         txtNextDay2Weather = (TextView) findViewById(R.id.txt_next_day_2_weather);
         txtNextDay3Weather = (TextView) findViewById(R.id.txt_next_day_3_weather);
+        imgNextDay1 = (ImageView) findViewById(R.id.img_next_day_1);
+        imgNextDay2 = (ImageView) findViewById(R.id.img_next_day_2);
+        imgNextDay3 = (ImageView) findViewById(R.id.img_next_day_3);
+        btnSettings = (ImageButton) findViewById(R.id.btn_settings);
+        btnSettings.setOnClickListener(settingsClick);
 
         cityDAO = CityDAO.getInstance(this);
         weatherService = WeatherService.getInstance();
     }
 
+    @Override
+    public void onStart() {
+        super.onStart();
+        Log.d(TAG, "onStart");
+
+        loadData();
+    }
+
+
+    private void loadData() {
+        loadCity(cityId);
+        loadWeather();
+        loadForecast();
+    }
+
+    private void loadCity(int cityId) {
+        city = cityDAO.getCityById(cityId);
+    }
 
     private void loadToday() {
         Calendar c = Calendar.getInstance();
@@ -113,7 +190,7 @@ public class MainActivity extends BaseActivity {
         loadDayNight(hours);
     }
 
-    private int getImageResourceId() {
+    private int getImageResourceId(Weather weather) {
         if (weather == null)
             return -1;
 
@@ -133,62 +210,20 @@ public class MainActivity extends BaseActivity {
             bottomContent.setBackgroundColor(getResources().getColor(R.color.sky_blue_dark_black));
         }
 
-        int resId = getImageResourceId();
+        int resId = getImageResourceId(currentWeather);
 
         if (resId != -1)
             imgWeather.setImageResource(resId);
     }
 
-    @Override
-    public void onStart() {
-        super.onStart();
-        loadWeather();
-        loadForecast();
-    }
-
     private void loadForecast() {
         Log.d(TAG, "loadForecast");
-        final City city = cityDAO.getCityById(DEFAULT_CITY_ID);
-        weatherService.loadForecast3Days(city.getId(), new GetForecast3DaysCallback() {
-            @Override
-            public void loadForecast3Days(Weather[] weathers) {
-                Log.d(TAG, "loadForecast3Days");
-
-
-                if (weathers == null || weathers.length != 3)
-                    return;
-
-                for (Weather w : weathers) {
-                    Log.d(TAG, "x=" + w.toString());
-                }
-
-                txtNextDay1Weather.setText(weathers[0].getCurrentTemperatureString());
-                txtNextDay2Weather.setText(weathers[1].getCurrentTemperatureString());
-                txtNextDay3Weather.setText(weathers[2].getCurrentTemperatureString());
-            }
-        });
+        weatherService.loadForecast3Days(city.getId(), forecast3DaysCallback);
     }
 
     private void loadWeather() {
         Log.d(TAG, "loadWeather");
-        final City city = cityDAO.getCityById(DEFAULT_CITY_ID);
-        weatherService.loadWeather(city.getId(), new GetWeatherCallback() {
-            @Override
-            public void loadWeather(Weather weather) {
-                Log.d(TAG, "loadWeather");
-
-                if (weather == null)
-                    return;
-
-                Log.d(TAG, "Weather=" + weather.getDescription());
-                txtCity.setText(weather.getName());
-                txtCountry.setText(city.getCountryCode());
-                txtMainWeather.setText(weather.getCurrentTemperatureString());
-                MainActivity.this.weather = weather;
-
-                loadToday();
-            }
-        });
+        weatherService.loadWeather(city.getId(), weatherCallback);
     }
 
     @Override
@@ -204,7 +239,18 @@ public class MainActivity extends BaseActivity {
         if (id == R.id.action_settings) {
             return true;
         }
-
         return super.onOptionsItemSelected(item);
+    }
+
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+        if (CITY_REQUEST_CODE == requestCode && data != null) {
+            int cityId = data.getIntExtra(CITY_ID, -1);
+            if (cityId == -1)
+                return;
+
+            MainActivity.this.cityId = cityId;
+            loadData();
+        }
     }
 }

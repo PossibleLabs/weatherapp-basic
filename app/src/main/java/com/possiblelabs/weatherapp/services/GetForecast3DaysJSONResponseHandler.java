@@ -30,17 +30,17 @@ public class GetForecast3DaysJSONResponseHandler extends BaseResponseHandler imp
 
             JSONArray list = baseObject.getJSONArray("list");
 
-            if (list.length() != 24)
+            if (list.length() != 3)
                 return null;
 
-            loadMainData(list.getJSONObject(0), w1);
+            loadMainDataFromForecast(list.getJSONObject(0), w1);
             loadWeather(list.getJSONObject(0), w1);
 
+            loadMainDataFromForecast(list.getJSONObject(1), w2);
             loadWeather(list.getJSONObject(1), w2);
-            loadMainData(list.getJSONObject(1), w2);
 
+            loadMainDataFromForecast(list.getJSONObject(2), w3);
             loadWeather(list.getJSONObject(2), w3);
-            loadMainData(list.getJSONObject(2), w3);
 
             weathers[0] = w1;
             weathers[1] = w2;

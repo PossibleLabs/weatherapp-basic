@@ -6,4 +6,5 @@
 
     <string name="degree">\u00B0C</string>
     <string name="separator">\u007C</string>
+    <string name="select_city">Select your city</string>
 </resources>
