@@ -27,7 +27,8 @@
             android:layout_toLeftOf="@+id/btn_search"
             android:padding="@dimen/search_padding"
             android:textColor="@color/white"
-            android:background="@android:color/transparent" />
+            android:background="@android:color/transparent"
+            android:singleLine="true" />
 
         <ImageButton
             android:layout_width="@dimen/search_width"
